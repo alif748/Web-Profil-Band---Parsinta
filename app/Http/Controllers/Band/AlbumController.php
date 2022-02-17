@@ -32,6 +32,8 @@ class AlbumController extends Controller
     }
 
     public function table(){
+        // echo '<pre>';
+        // var_dump($album);
         return view('albums.table', [
             'albums' => Album::paginate(16),
             'title' => 'Album',
@@ -39,6 +41,8 @@ class AlbumController extends Controller
     }
 
     public function edit(Album $album){
+        // echo '<pre>';
+        // var_dump($album);
         return view('albums.edit', [
             'title' => "Edit album: {$album->name}",
             'album' => $album,
